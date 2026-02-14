@@ -42,7 +42,7 @@ export const generateSvgFromPrompt = async (prompt: string): Promise<string> => 
     const fullPrompt = `Create a high-detail 64x64 pixel art SVG of: "${prompt}"`;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview',
+      model: 'gemini-2.5-pro',
       contents: fullPrompt,
       config: {
         systemInstruction: systemPrompt,
