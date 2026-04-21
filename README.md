@@ -75,7 +75,7 @@ Then open:
 ```id="9z4g6m"
 http://localhost:3000/
 ```
-![Demo](./Demo.png)
+![Demo](./Bugrer.png)
 ---
 
 ## ⚠️ Notes
