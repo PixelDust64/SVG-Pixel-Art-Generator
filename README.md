@@ -2,19 +2,114 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# 🎨 SVG Pixel Art Generator
 
-This contains everything you need to run your app locally.
+A web application to generate **pixel art in SVG format using AI**, supporting both online and local models.
 
-View your app in AI Studio: https://ai.studio/apps/d1a9c655-f342-44ff-9a42-3f009138860f
+---
 
-## Run Locally
+## 🚀 Features
 
-**Prerequisites:**  Node.js
+* Generate pixel art from text prompts
+* Export as SVG
+* Select different resolutions
+* Support for:
+
+  * 🌐 Online API (Gemini)
+  * 💻 Local models via LM Studio
+
+---
+
+## 🛠️ Tech Stack
+
+* React + TypeScript
+* Vite
+* AI integration (Gemini / Local Models)
+
+---
+
+## ▶️ Run Locally
+
+### Prerequisites
+
+* Node.js installed
+
+---
+
+### 1. Install dependencies
+
+```bash id="zj6c2h"
+npm install
+```
+
+---
+
+### 2. Choose how you want to run
+
+#### 🔹 Option A — Use API (Gemini)
+
+Create a `.env.local` file in the project root:
+
+```env id="7t7u5g"
+GEMINI_API_KEY=your_api_key_here
+```
+
+---
+
+#### 🔹 Option B — Use local models (LM Studio)
+
+* Install and run LM Studio
+* Start the local server (e.g., `http://localhost:1234`)
+* Select the model inside the app
+
+---
+
+### 3. Start the app
+
+```bash id="9avtqk"
+npm run dev
+```
+
+Then open:
+
+```id="9z4g6m"
+http://localhost:3000/
+```
+
+---
+
+![Demo](./Bugrer.png)
+
+## ⚠️ Notes
+
+* API key is not required if using local models
+* Make sure LM Studio is running before generating images
+* Performance depends on the selected model
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## ⚡ Batch Generation Mode
+
+The new **Batch Generation** tab allows you to queue multiple assets for sequential rendering.
+
+<div align="center">
+  <img src="./batch1.png" alt="Batch Generation Interface" width="900" />
+</div>
+
+**Key features of this mode:**
+* **Queue Management**: Add multiple rows with different prompts in one go.
+* **Independent Settings**: Select different models and resolutions for each individual asset.
+* **Status Tracking**: Monitor the progress of each generation with real-time status indicators.
+* **Individual Downloads**: Export each generated SVG directly from the list.
+
+
+---
+
+## 📌 About
+
+This project was created to make AI-powered pixel art generation simple, fast, and flexible, allowing both online and offline usage.
+
+---
+
+## 📄 License
+
+MIT
