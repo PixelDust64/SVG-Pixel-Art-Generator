@@ -112,3 +112,9 @@ npm run build
 * **Vite Middleware API** (`server/envApiPlugin.ts`) for `.env` key management and CORS-free provider proxying
 * **Headless Rasterizer & PNG Encoder** (`tools/lib/headlessCanvas.ts`, `utils/rasterizer.ts`)
 * **SVG Validator & Auto-Sanitizer** (`utils/svgChecker.ts`)
+
+---
+
+## 🙏 Agradecimentos
+
+**Agradecimentos à comunidade BeaverNet / BeaverAI:** agradecemos ao [BeaverNet](https://net.beaverai.org) e a todos os provedores comunitários que disponibilizam modelos abertos gratuitamente para a comunidade através da API aberta ([docs](https://net.beaverai.org/docs/platform/overview)).
