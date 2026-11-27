@@ -1,12 +1,19 @@
 {
   "name": "pixel-art-asset",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "npm run test:unit",
+    "test:unit": "node --experimental-transform-types --test test/unittest/*.test.ts",
+    "test:endpoints": "node --experimental-transform-types --test test/integrationtest/endpointDiscovery.test.ts",
+    "test:integration": "node --experimental-transform-types --test test/integrationtest/*.test.ts",
+    "bulk": "node --experimental-transform-types --no-warnings tools/bulk-test.ts",
+    "batch100test": "node --experimental-transform-types --no-warnings test/integrationtest/batch100test.ts",
+    "batch:compare": "node --experimental-transform-types --no-warnings test/integrationtest/runComparative.ts"
   },
   "dependencies": {
     "react": "^19.2.0",

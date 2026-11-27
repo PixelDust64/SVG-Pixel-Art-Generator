@@ -16,15 +16,20 @@ export enum Resolution {
   R128x64 = '128x64'
 }
 
-export enum AIModel {
-  GEMINI_3_PRO = 'gemini-3-pro-preview',
-  GEMINI_2_5_PRO = 'gemini-2.5-pro',
-  GEMINI_2_5_FLASH = 'gemini-2.5-flash'
-}
+export type AIModel = string;
 
 export enum ModelSource {
   GEMINI = 'GEMINI',
-  LOCAL = 'LOCAL'
+  LOCAL = 'LOCAL',
+  BEAVERNET = 'BEAVERNET'
+}
+
+export type ProviderId = 'local' | 'beavernet' | 'gemini';
+
+export interface ProviderKeyStatus {
+  local: { configured: boolean };
+  beavernet: { configured: boolean };
+  gemini: { configured: boolean };
 }
 
 export interface LocalModel {
@@ -32,23 +37,86 @@ export interface LocalModel {
   name: string;
 }
 
-export const MODEL_DISPLAY_NAMES: Record<AIModel, string> = {
-  [AIModel.GEMINI_3_PRO]: 'Gemini 3 Pro',
-  [AIModel.GEMINI_2_5_PRO]: 'Gemini 2.5 Pro',
-  [AIModel.GEMINI_2_5_FLASH]: 'Gemini 2.5 Flash'
-};
+export type ProviderModel = LocalModel;
+
+export type BackdropType = 'none' | 'dark' | 'ground';
+
+export interface SvgCheckReport {
+  passed: boolean;
+  isEmpty: boolean;
+  spillCount: number;
+  bounds: { bx0: number; by0: number; bx1: number; by1: number } | null;
+  uniqueColors: number;
+  rectCount: number;
+  invalidFills: number;
+  hasLightLayer: boolean;
+  roundedRects: number;
+  warnings: string[];
+  errors: string[];
+}
+
+export interface ColorPalette {
+  id: string;
+  name: string;
+  colors: string[];
+}
+
+export interface AsepriteFrame {
+  filename: string;
+  frame: { x: number; y: number; w: number; h: number };
+  rotated: boolean;
+  trimmed: boolean;
+  spriteSourceSize: { x: number; y: number; w: number; h: number };
+  sourceSize: { w: number; h: number };
+  duration: number;
+}
+
+export interface AsepriteJson {
+  frames: AsepriteFrame[];
+  meta: {
+    app: string;
+    version: string;
+    image: string;
+    format: string;
+    size: { w: number; h: number };
+    scale: string;
+    frameTags: { name: string; from: number; to: number; direction: string }[];
+    pixelfx: {
+      id: string;
+      name: string;
+      fps: number;
+      loop: boolean;
+      frames: number;
+      frameSize: [number, number];
+      pivot: [number, number];
+      columns: number;
+    };
+  };
+}
+
+export interface InputSvgFile {
+  id: string;
+  name: string;
+  content: string;
+  width?: number;
+  height?: number;
+}
 
 export interface GeneratedSvg {
   id: string;
   content: string;
   prompt: string;
   timestamp: number;
+  resolution?: Resolution;
   generationTime?: number;
   tokenCount?: {
     prompt: number;
     completion: number;
     total: number;
   };
+  origin?: [number, number];
+  checkReport?: SvgCheckReport;
+  palette?: string[];
 }
 
 export interface GenerationResult {
@@ -59,6 +127,9 @@ export interface GenerationResult {
     completion: number;
     total: number;
   };
+  origin?: [number, number];
+  checkReport?: SvgCheckReport;
+  palette?: string[];
 }
 
 export interface BatchItem {

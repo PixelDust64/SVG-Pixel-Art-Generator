@@ -1,0 +1,315 @@
+# ==============================================================================
+# BATCH 100 TEST PROMPTS (300 PROMPTS TOTAL: 100 PER CATEGORY)
+# ==============================================================================
+
+# ==============================================================================
+# CATEGORY 1: 64x64 (Square - Icons, Items, Potions, Food, Relics, Small Creatures)
+# ==============================================================================
+[64x64] 001. Glowing red health potion in a faceted glass flask with a cork
+[64x64] 002. Ancient wooden treasure chest with iron bands and a golden lock
+[64x64] 003. Pixel art cheeseburger with melted cheddar, lettuce, and sesame bun
+[64x64] 004. Floating purple arcane crystal shard emitting small energy sparks
+[64x64] 005. Blue translucent slime monster with cute white eyes and a core
+[64x64] 006. Battle-worn iron knight helmet with a red feather plume
+[64x64] 007. Lit dynamite stick with a burning fuse and bright sparks
+[64x64] 008. Golden royal crown encrusted with rubies and emeralds
+[64x64] 009. Campfire with burning wooden logs, orange flames, and rising embers
+[64x64] 010. Retro green circuit board microchip with gold contact pins
+[64x64] 011. Magical spellbook with a glowing eye on its leather cover
+[64x64] 012. Golden coin pouch overflowing with sparkling gold pieces
+[64x64] 013. Crimson poison dagger with dripping green venom droplets
+[64x64] 014. Golden pocket watch with delicate Roman numerals and cracked glass
+[64x64] 015. Steaming slice of pepperoni pizza with stringy melted mozzarella
+[64x64] 016. Mystical compass with a swirling nebula trapped in the glass dial
+[64x64] 017. Cute orange tabby cat curled up sleeping on a small mat
+[64x64] 018. Polished silver shield with a lion crest emblem in relief
+[64x64] 019. Golden chalice overflowing with ruby red wine
+[64x64] 020. Small wooden barrel with iron hoops and a brass tap
+[64x64] 021. Spooky Jack-o-lantern pumpkin with a jagged glowing grin
+[64x64] 022. Crystal mana potion in a spherical glass vial with blue swirls
+[64x64] 023. Heavy blacksmith anvil with an iron hammer resting on it
+[64x64] 024. Golden key with an intricate skull bow and ornate teeth
+[64x64] 025. Frost wand carved from pale wood tipped with a glittering ice snowflake
+[64x64] 026. Ripe red strawberry with glossy seeds and a fresh green stem
+[64x64] 027. Small mossy turtle with tiny green shell patterns
+[64x64] 028. Shiny brass bell with a rope handle and a sparkling chime
+[64x64] 029. Cursed obsidian skull with glowing purple smoke leaking from eye sockets
+[64x64] 030. Steaming wooden mug filled with foamy amber root beer
+[64x64] 031. Mechanical wind-up clockwork bird with copper cogs
+[64x64] 032. Miniature wooden birdhouse with a red shingled roof
+[64x64] 033. Fiery red phoenix feather radiating warmth and tiny embers
+[64x64] 034. Silver shuriken ninja throwing star with sharp reflective edges
+[64x64] 035. Golden horseshoe with five square nail holes
+[64x64] 036. Brown leather adventurer backpack strapped with a rolled sleeping mat
+[64x64] 037. Red mushroom with white spots and a tiny curled stalk
+[64x64] 038. Polished gemstone ring set with a star sapphire
+[64x64] 039. Miniature pirate cannon loaded with a round iron cannonball
+[64x64] 040. Tiny robotic spider with a glowing red optic lens
+[64x64] 041. Freshly glazed chocolate doughnut with colorful rainbow sprinkles
+[64x64] 042. Vintage brass oil lantern with a flickering warm flame
+[64x64] 043. Small wooden music box with an open lid showing miniature bronze gears
+[64x64] 044. Ancient scroll rolled up and sealed with red dripping wax
+[64x64] 045. Cute round pufferfish with inflated spikes and surprised eyes
+[64x64] 046. Pair of winged Hermes boots made of brown leather and white feathers
+[64x64] 047. Glowing golden honeycomb piece dripping amber sweet honey
+[64x64] 048. Tribal wooden tiki mask with carved teeth and feathery eyebrows
+[64x64] 049. Sparkling diamond gemstone cut in brilliant octagon shape
+[64x64] 050. Tiny dragon egg with shimmering iridescent emerald scales
+[64x64] 051. Wooden hourglass with glowing violet sand falling down
+[64x64] 052. Retro arcade joystick with a bright red ball handle and black base
+[64x64] 053. Iron bear trap with jagged open jaws and tension springs
+[64x64] 054. Steaming hot bowl of Japanese ramen with egg and sliced pork
+[64x64] 055. Miniature potion cauldron bubbling with noxious green fumes
+[64x64] 056. Golden scarab beetle amulet with spread turquoise wings
+[64x64] 057. Small cactus in a terracotta clay pot with a pink flower
+[64x64] 058. Pair of brass steampunk goggles with cracked leather straps
+[64x64] 059. Snowy crystal snowglobe containing a miniature cabin and swirling flakes
+[64x64] 060. Golden pirate compass pointing true north with decorative fleur-de-lis
+[64x64] 061. Crystal ball seated on an ornate brass claw tripod
+[64x64] 062. Hot cherry pie with golden lattice crust and oozing red filling
+[64x64] 063. Glowing radioactive uranium rod encased in a glass chamber
+[64x64] 064. Cute baby penguin with fluffy grey feathers and yellow beak
+[64x64] 065. Leather quiver packed with feather-fletched wooden hunting arrows
+[64x64] 066. Runed bone die with glowing crimson dots on each face
+[64x64] 067. Jeweled dagger with a Damascus steel wavy blade
+[64x64] 068. Golden pocket sundial with folding gnomon and shadow markings
+[64x64] 069. Crunchy taco with seasoned beef, shredded lettuce, and diced tomatoes
+[64x64] 070. Miniature bonsai tree planted in an oval ceramic pot
+[64x64] 071. Antique brass padlock with keyhole and patina weathering
+[64x64] 072. Pair of fluffy woolen winter mittens connected by a yarn string
+[64x64] 073. Glowing fairy trapped gently inside an old mason jar
+[64x64] 074. Polished obsidian mirror reflecting a sinister pale face
+[64x64] 075. Golden wheat sheaf tied neatly with a rustic red ribbon
+[64x64] 076. Fluffy white bunny rabbit nibbling on an orange carrot
+[64x64] 077. Ceramic teapot painted with blue floral patterns emitting steam
+[64x64] 078. Old copper diving helmet with three round glass viewing ports
+[64x64] 079. Bunch of ripe purple grapes with a curling vine and green leaf
+[64x64] 080. Golden lute with four strings and delicate ivory inlays
+[64x64] 081. Small meteorite rock smoking with a faint celestial glow
+[64x64] 082. Delicious frosted cupcake topped with a bright candied cherry
+[64x64] 083. Ancient runic stone tablet with carved glowing hieroglyphs
+[64x64] 084. Tiny clockwork mouse with a wind-up key turning on its back
+[64x64] 085. Ornate silver hand mirror with an engraved vine border
+[64x64] 086. Steaming cup of dark espresso coffee with foam art
+[64x64] 087. Shimmering pearl inside an open pink oyster seashell
+[64x64] 088. Rusty iron anchor wrapped with a frayed piece of rope
+[64x64] 089. Golden trophy cup with star handles engraved with number 1
+[64x64] 090. Small potted sunflower turning towards the morning sun
+[64x64] 091. Vintage brown leather baseball glove holding a white ball
+[64x64] 092. Cute round baby chick popping out of a cracked eggshell
+[64x64] 093. Glowing firefly lantern made of hollow bamboo and rice paper
+[64x64] 094. Shimmering prismatic prism splitting light into a rainbow beam
+[64x64] 095. Plate of golden pancakes with a melting butter cube and maple syrup
+[64x64] 096. Royal sceptre topped with an orb of glowing sapphire
+[64x64] 097. Mini retro cassette tape with hand-written mixtape label
+[64x64] 098. Weathered iron caltrop with four deadly spikes
+[64x64] 099. Cute sleeping baby fox with a bushy orange tail wrapped around itself
+[64x64] 100. Eldritch floating eye with golden iris surrounded by purple mist
+
+# ==============================================================================
+# CATEGORY 2: 64x128 (Tall/Vertical - Characters, Full-body Outfits, Towers, Trees, Weapons)
+# ==============================================================================
+[64x128] 001. Dark armored knight standing with a cape and glowing visor
+[64x128] 002. Tall ancient pine tree covered in snow and icicles
+[64x128] 003. Legendary greatsword with a golden hilt and glowing blue runic blade
+[64x128] 004. Cyberpunk vending machine with neon signs and glowing drink cans
+[64x128] 005. Gothic stone grandfather clock with a golden pendulum
+[64x128] 006. Medieval stone watchtower with a wooden roof and a red banner
+[64x128] 007. Wandering mage holding a wooden staff topped with a fiery orb
+[64x128] 008. Cascading mountain waterfall hitting dark rocks with white foam
+[64x128] 009. Ornate wooden dungeon door reinforced with iron spikes and skull ring
+[64x128] 010. Sci-fi cryogenic stasis pod with green liquid and glass tube
+[64x128] 011. Forest elven archer drawing a bow with green tunic and feathered hood
+[64x128] 012. Ancient Egyptian pharaoh sarcophagus with gold leaf and lapis lazuli
+[64x128] 013. Futuristic cyberpunk cyborg standing in a long trenchcoat
+[64x128] 014. Medieval stone castle tower with battlements and arrow slits
+[64x128] 015. Giant Redwood sequoia tree with thick bark and lush high canopy
+[64x128] 016. Royal palace guard in red uniform and tall black bearskin hat
+[64x128] 017. Full-length Gothic stained glass window depicting an angel with a sword
+[64x128] 018. Towering stone obelisk etched with glowing cyan alien runes
+[64x128] 019. Viking berserker warrior with horned helmet, beard, and twin battleaxes
+[64x128] 020. Steampunk clock tower with towering brass gears and clock face
+[64x128] 021. Elegant royal elven queen holding a sceptre in a flowing silver gown
+[64x128] 022. Ancient carved totem pole with eagle, wolf, and bear faces
+[64x128] 023. Heavy iron gothic flail polearm with barbed chain and spiked mace head
+[64x128] 024. Tall lighthouse standing on a jagged cliff with beacon beam shining out
+[64x128] 025. Undead skeleton warrior standing in tattered chainmail holding a rusted spear
+[64x128] 026. Majestic marble Greek column wrapped in winding ivy leaves
+[64x128] 027. High-tech mech sniper standing upright with extended barrel rifle
+[64x128] 028. Medieval knight in shining plate armor holding a kite shield and longsword
+[64x128] 029. Tall weeping willow tree with cascading emerald green branches
+[64x128] 030. Desert nomad wanderer wrapped in flowing sandstorm robes with staff
+[64x128] 031. Dark necromancer in hooded robes holding an ebony skull staff
+[64x128] 032. Towering cyberpunk skyscraper pillar covered in neon advertising signs
+[64x128] 033. Dwarven blacksmith standing with heavy leather apron and glowing forge hammer
+[64x128] 034. Tall grandfather bookcase packed with colorful leather-bound tomes
+[64x128] 035. Samurai warrior standing in traditional black and crimson armor with katana
+[64x128] 036. Ancient overgrown temple column with moss and cracked stone carvings
+[64x128] 037. Medieval executioner standing with black cowl hood and giant executioner axe
+[64x128] 038. Sci-fi teleportation portal pillar with rotating energy rings
+[64x128] 039. Full-body retro arcade cabinet machine with joystick and glowing marquee
+[64x128] 040. Forest dryad nymph tree spirit with bark skin and leafy braided hair
+[64x128] 041. Tall ornate wrought-iron street lamp post glowing in a foggy night
+[64x128] 042. Deep sea diver in vintage brass diving suit standing with heavy lead boots
+[64x128] 043. Grim Reaper figure in ragged shadowy robes holding a towering scythe
+[64x128] 044. Ancient stone sundial pillar standing in an overgrown garden
+[64x128] 045. Cyberpunk hacker standing with holograms floating around their arms
+[64x128] 046. Tall spiral shell tower rising from coral reef seabed
+[64x128] 047. Valkyrie winged warrior maiden with spear, winged helm, and round shield
+[64x128] 048. Sci-fi power core vertical cylinder with pulsing blue plasma currents
+[64x128] 049. Forest ranger standing with hooded cloak, leather boots, and hunting falcon
+[64x128] 050. Elaborate wooden grandfather clock with moon phase dial
+[64x128] 051. Ancient stone golem standing sentinel with glowing rune on chest
+[64x128] 052. Tall vertical bamboo plant stalk with green leaves and joints
+[64x128] 053. Medieval court jester standing in colorful motley with bell-tipped hat
+[64x128] 054. High fantasy halberd polearm with axe head, spear tip, and hook
+[64x128] 055. Tall smoking industrial brick chimney spewing thick dark clouds
+[64x128] 056. Royal high priestess in golden robes holding an incense thurible
+[64x128] 057. Towering stalagmite rock formation glistening with damp minerals
+[64x128] 058. Futuristic robotic android butler standing in polished white chassis
+[64x128] 059. Dark cultist priest in blood-red robes with ceremonial bone dagger
+[64x128] 060. Tall winding stone staircase ascending into mysterious mist
+[64x128] 061. Gladiator warrior in arena gear with trident, net, and bronze shoulder guard
+[64x128] 062. Tall slender birch tree with white paper bark and gold autumn leaves
+[64x128] 063. Sci-fi assault mech upright with rocket pods on shoulders
+[64x128] 064. Medieval tavern bouncer with muscular build, apron, and wooden cudgel
+[64x128] 065. Towering crystal spire rising from jagged purple geode rock
+[64x128] 066. Pirate captain standing on wooden peg leg with cutlass and tricorn hat
+[64x128] 067. Tall antique apothecary cabinet with dozens of small wooden remedy drawers
+[64x128] 068. Steampunk inventor standing in leather vest with brass mechanical arm
+[64x128] 069. Gothic church bell tower with arched windows and swinging bronze bell
+[64x128] 070. Angelic seraph warrior with six golden wings holding a flaming sword
+[64x128] 071. Towering twisted thorn vine climbing up a ruined stone wall
+[64x128] 072. Sci-fi quantum mainframe server rack with blinking LED arrays
+[64x128] 073. Traditional geisha standing gracefully in patterned silk kimono with fan
+[64x128] 074. Heavy battle standard war banner fluttering from a tall wooden pole
+[64x128] 075. Alchemist lab distillation apparatus with tall glass condensing tubes
+[64x128] 076. Space explorer astronaut in bulky pressurized EVA suit
+[64x128] 077. Tall stone monolith with mysterious circular celestial engravings
+[64x128] 078. Fire elemental efreet standing tall composed of living flames
+[64x128] 079. Medieval herald standing holding a long brass trumpet with embroidered banner
+[64x128] 080. Towering overgrown beanstalk reaching up into white clouds
+[64x128] 081. Futuristic cyborg assassin in stealth bodysuit with dual vibro-blades
+[64x128] 082. Classical outdoor stone fountain with three cascading tiered basins
+[64x128] 083. Witch doctor standing with horned skull headdress and feather rattle
+[64x128] 084. Tall carved wooden guillotine with gleaming slanted steel blade
+[64x128] 085. Cyberpunk bouncer with neon cybernetic tattoos standing cross-armed
+[64x128] 086. Ancient sandstone hieroglyph pillar under blazing Egyptian sun
+[64x128] 087. Medieval crossbowman standing in padded gambeson cocking a heavy crossbow
+[64x128] 088. Tall decorative birdcage stand with an exotic songbird inside
+[64x128] 089. High-tech vertical particle accelerator column with magnetic rings
+[64x128] 090. Frost giant warrior standing clad in mammoth fur and ice armor
+[64x128] 091. Tall wooden mast of a sailing ship with furled canvas sails and crow's nest
+[64x128] 092. Vampire lord in high-collared velvet cloak holding a glass of crimson wine
+[64x128] 093. Towering enchanted crystal spire with spiral staircase
+[64x128] 094. Sci-fi hydroponics grow chamber tower with lush vertical crops
+[64x128] 095. Medieval paladin standing proudly with glowing warhammer and tabard
+[64x128] 096. Gothic gargoyle statue perched atop a stone cornice corner
+[64x128] 097. Steampunk automated automaton soldier standing with brass rifle
+[64x128] 098. Tall mystical sundial column surrounded by floating astrological rings
+[64x128] 099. Dark sorceress floating upright in shadowy mist with glowing eyes
+[64x128] 100. Ancient celestial star-chart pillar pointing directly towards the polar star
+
+# ==============================================================================
+# CATEGORY 3: 128x64 (Wide/Horizontal - Landscapes, Vehicles, Ships, Wide Bosses, Panoramas)
+# ==============================================================================
+[128x64] 001. Cyberpunk sports car in side profile with glowing cyan neon rims
+[128x64] 002. Medieval stone arch bridge crossing over a calm blue river
+[128x64] 003. Pirate galleon ship sailing on pixel waves in side view
+[128x64] 004. Giant red sleeping dragon curled over a pile of gold coins
+[128x64] 005. Steam locomotive train engine with black smoke coming from the chimney
+[128x64] 006. Desert horizon panorama with sand dunes, cacti, and a twin sunset
+[128x64] 007. Futuristic spaceship cockpit dashboard with radar screens and buttons
+[128x64] 008. Long wooden tavern counter stocked with barrels, mugs, and candles
+[128x64] 009. Mechanical giant crab boss with heavy iron claws and steam vents
+[128x64] 010. Overgrown stone ruins of a fallen statue in a jungle clearing
+[128x64] 011. Retro 80s arcade interior with a row of colorful glowing game cabinets
+[128x64] 012. Submarine cruising underwater past glowing coral reefs and fish schools
+[128x64] 013. Wide medieval banquet feast table laden with roast meats and fruit platters
+[128x64] 014. Cyberpunk floating hover-taxi speeding above a foggy city street
+[128x64] 015. Giant prehistoric woolly mammoth walking across a snowy tundra horizon
+[128x64] 016. Wild west steam train robbery with bandits on horses galloping alongside
+[128x64] 017. Ancient Greek trireme war galley with rows of oars rowing across the sea
+[128x64] 018. Wide laboratory workbench with microscopes, beakers, and bubbling test tubes
+[128x64] 019. Giant mechanical sand worm emerging from desert dunes in side view
+[128x64] 020. Futuristic battle cruiser warship flying through deep starfield space
+[128x64] 021. Quaint village street with cobblestones, half-timbered houses, and flower boxes
+[128x64] 022. Long iron suspension bridge spanning across a misty mountain gorge
+[128x64] 023. Monster truck with massive knobby tires leaping over dirt mounds
+[128x64] 024. Sleeping giant stone golem half-buried in grass and wild flowers
+[128x64] 025. Space station docking bay with cargo shuttles and robotic crane arms
+[128x64] 026. Viking longship with striped dragon sail cutting through stormy arctic waves
+[128x64] 027. Wide blacksmith forge workshop with glowing coals, anvils, and hanging tools
+[128x64] 028. Giant kraken monster tentacle wrapping around a sinking wooden ship
+[128x64] 029. High-speed futuristic maglev bullet train gliding along elevated tracks
+[128x64] 030. Sunset beach panorama with palm trees, rolling waves, and orange sky
+[128x64] 031. Armored military tank moving forward with tracks and rotating gun turret
+[128x64] 032. Medieval castle courtyard with training dummies, weapon racks, and banners
+[128x64] 033. Cyberpunk alleyway scene with noodle bar stand and rainy puddle reflections
+[128x64] 034. Giant blue whale swimming gracefully underwater with sun rays shining through
+[128x64] 035. Steam-powered tractor machine plowing through a golden wheat field
+[128x64] 036. Wide wizard study desk covered in open scrolls, quill pens, and crystal globes
+[128x64] 037. Post-apocalyptic battle buggy with mounted machine gun and spiked bumpers
+[128x64] 038. Dragon lair cavern interior with stalactites, lava pool, and treasure mounds
+[128x64] 039. Vintage red fire truck with brass ladder, water hose, and chrome grille
+[128x64] 040. Flying zeppelin airship with wooden gondola cabin sailing past fluffy clouds
+[128x64] 041. Long banquet sushi bar counter with colorful sushi rolls, sashimi, and chopsticks
+[128x64] 042. Giant armored siege ram engine with iron-plated roof battering castle gates
+[128x64] 043. Futuristic laser defense perimeter wall with automated sentry turrets
+[128x64] 044. Wild west saloon front exterior with swinging doors, porch, and hitching post
+[128x64] 045. Deep space asteroid mining rig with drilling lasers and cargo containers
+[128x64] 046. Cozy living room fireplace hearth with brick mantel, stockings, and armchairs
+[128x64] 047. Monster hydra with three snarling serpentine heads rising from a swamp
+[128x64] 048. Classic convertible vintage car cruising down a coastal ocean highway
+[128x64] 049. Mountain range silhouette horizon under starry night sky with aurora borealis
+[128x64] 050. Medieval archery range with straw targets, wooden fences, and quivers
+[128x64] 051. Giant robotic mantis boss mech armed with dual plasma scythe blades
+[128x64] 052. Steampunk submarine with brass rivets, spinning propellers, and glass portholes
+[128x64] 053. Wide dungeon corridor with iron portcullis, torch sconces, and bone piles
+[128x64] 054. Cargo freight train with colorful shipping containers traveling through valleys
+[128x64] 055. Tropical coral reef panorama with sea turtles, anemones, and clownfish
+[128x64] 056. Sci-fi hangar bay with sleek starfighters parked on illuminated landing pads
+[128x64] 057. Ancient Egyptian oasis scene with palm trees, reflective pool, and distant pyramids
+[128x64] 058. Heavy mining dump truck with giant wheels loaded with glowing crystal ore
+[128x64] 059. Dragon fighting an armored knight on a rocky clifftop in silhouette
+[128x64] 060. Victorian train station platform with wrought iron roof arches and passengers
+[128x64] 061. Giant sea serpent coiling around a lonely ocean rock spire
+[128x64] 062. Formula one racing car speeding on track with motion blur and sponsor decals
+[128x64] 063. Wide greenhouse conservatory filled with exotic tropical plants and ferns
+[128x64] 064. Medieval siege trebuchet ready to launch a massive flaming boulder
+[128x64] 065. Cyberpunk flying drone delivery vehicle carrying a glowing package
+[128x64] 066. Arctic ice shelf landscape with glaciers, icebergs, and wandering polar bears
+[128x64] 067. Retro diner counter with vinyl stools, milkshake glasses, and jukebox
+[128x64] 068. Sci-fi hovercraft skimming across an alien purple swamp surface
+[128x64] 069. Giant sleeping dragon guarding an altar in an underground crystalline temple
+[128x64] 070. Old wooden watermill beside a rushing river wheel splashing water
+[128x64] 071. Wide command bridge of an interstellar starship with captains chair and main screen
+[128x64] 072. Military convoy of armored transport trucks driving down a dirt road
+[128x64] 073. Beautiful autumn park landscape with red maple trees, wooden bench, and lake
+[128x64] 074. Giant robotic scorpion tank with tail railgun and heavy front pincers
+[128x64] 075. Vintage biplane airplane soaring through blue sky with spinning front propeller
+[128x64] 076. Wide treasure vault room filled with gold coin piles, chests, and jeweled crowns
+[128x64] 077. Cyberpunk highway overpass with stream of glowing neon vehicle tail-lights
+[128x64] 078. Prehistoric dinosaur jungle with brontosaurus eating tall tree leaves
+[128x64] 079. Medieval jousting arena fence with colorful knight pavilions and spectators
+[128x64] 080. Sci-fi space elevator base station with transport car ascending towards orbit
+[128x64] 081. Wide potion shop apothecary counter with glass jars, herbs, and balance scales
+[128x64] 082. Heavy armored snowplow clearing a deep snowy mountain pass
+[128x64] 083. Fantasy airship pirate vessel with dark sails and broadside cannons
+[128x64] 084. Ancient Roman chariot racing team with four galloping white horses
+[128x64] 085. Deep sea hydrothermal vent with glowing red mineral chimney and tube worms
+[128x64] 086. Wide command bunker operations room with world map display and glowing consoles
+[128x64] 087. Steampunk walking spider-tank machine with chimney pipes and steam release
+[128x64] 088. Tropical island vista with white sand beach, turquoise lagoon, and volcano
+[128x64] 089. Heavy construction excavator digger bucket scooping rocky terrain
+[128x64] 090. Haunted graveyard horizon with crooked tombstones, twisted trees, and full moon
+[128x64] 091. Sci-fi planetary defense railgun battery aiming up into starry space
+[128x64] 092. Medieval farmstead panorama with barn, silo, wooden fences, and grazing cows
+[128x64] 093. Cyberpunk nightclub DJ booth with turntables, equalizer bars, and laser lights
+[128x64] 094. Giant lava golem boss wading across a lake of molten magma
+[128x64] 095. Classic yellow school bus driving on a country road at sunrise
+[128x64] 096. Wide underground dwarven mining cavern with minecart tracks and lanterns
+[128x64] 097. Futuristic solar-powered rover vehicle exploring Martian red rock plains
+[128x64] 098. Victorian harbor wharf dock with wooden warehouses, crates, and seagulls
+[128x64] 099. Giant mech suit battling a colossal alien beast in a destroyed city street
+[128x64] 100. Panoramic twilight lake reflection with pine trees silhouette and shooting star

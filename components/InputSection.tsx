@@ -1,83 +1,69 @@
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
-*/
+ */
 
-import React, { useState, useCallback } from 'react';
-import { Cpu, Loader2, Zap, Settings2, Globe, Monitor, RefreshCw } from 'lucide-react';
-import { GenerationStatus, Resolution, AIModel, MODEL_DISPLAY_NAMES, ModelSource, LocalModel } from '../types';
-import { fetchLocalModels } from '../services/geminiService';
+import React, { useCallback } from 'react';
+import { Cpu, Loader2, Zap, Settings2, Globe, Monitor, Server, RefreshCw } from 'lucide-react';
+import { GenerationStatus, Resolution, ModelSource, LocalModel } from '../types';
 
 interface InputSectionProps {
-  onGenerate: (prompt: string, resolution: Resolution, model: AIModel) => void;
+  onGenerate: (prompt: string, resolution: Resolution, modelId: string) => void;
   status: GenerationStatus;
   prompt: string;
   onPromptChange: (prompt: string) => void;
   resolution: Resolution;
   onResolutionChange: (res: Resolution) => void;
-  model: AIModel;
-  onModelChange: (model: AIModel) => void;
-  
+
   modelSource: ModelSource;
   onModelSourceChange: (source: ModelSource) => void;
   lmStudioUrl: string;
   onLmStudioUrlChange: (url: string) => void;
-  localModels: LocalModel[];
-  onLocalModelsChange: (models: LocalModel[]) => void;
-  selectedLocalModelId: string;
-  onSelectedLocalModelIdChange: (id: string) => void;
+  availableModels: LocalModel[];
+  selectedModelId: string;
+  onSelectedModelIdChange: (id: string) => void;
+  isFetchingModels: boolean;
+  onRefreshModels: () => void;
+  modelsError?: string | null;
+  onOpenDocs: () => void;
 }
 
-export const InputSection: React.FC<InputSectionProps> = ({ 
-  onGenerate, 
-  status, 
+export const InputSection: React.FC<InputSectionProps> = ({
+  onGenerate,
+  status,
   prompt,
   onPromptChange,
-  resolution, 
+  resolution,
   onResolutionChange,
-  model,
-  onModelChange,
   modelSource,
   onModelSourceChange,
   lmStudioUrl,
   onLmStudioUrlChange,
-  localModels,
-  onLocalModelsChange,
-  selectedLocalModelId,
-  onSelectedLocalModelIdChange
+  availableModels,
+  selectedModelId,
+  onSelectedModelIdChange,
+  isFetchingModels,
+  onRefreshModels,
+  modelsError,
+  onOpenDocs
 }) => {
-  const [isFetchingModels, setIsFetchingModels] = useState(false);
-
-  const handleSubmit = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    if (prompt.trim() && status !== GenerationStatus.LOADING) {
-      onGenerate(prompt.trim(), resolution, model);
-    }
-  }, [prompt, status, onGenerate, resolution, model]);
-
-  const handleFetchModels = async () => {
-    setIsFetchingModels(true);
-    try {
-      const models = await fetchLocalModels(lmStudioUrl);
-      onLocalModelsChange(models);
-      if (models.length > 0 && !selectedLocalModelId) {
-        onSelectedLocalModelIdChange(models[0].id);
-      }
-    } catch (error) {
-      alert("Failed to fetch models from LM Studio. Make sure it's running and CORS is enabled.");
-    } finally {
-      setIsFetchingModels(false);
-    }
-  };
-
   const isLoading = status === GenerationStatus.LOADING;
 
+  const handleSubmit = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault();
+      if (prompt.trim() && selectedModelId && !isLoading) {
+        onGenerate(prompt.trim(), resolution, selectedModelId);
+      }
+    },
+    [prompt, selectedModelId, isLoading, onGenerate, resolution]
+  );
+
   const suggestions = [
-    'Health Potion', 
-    'Crystal Sword', 
-    'Cyberpunk Helmet', 
-    'Forest Slime', 
+    'Health Potion',
+    'Crystal Sword',
+    'Cyberpunk Helmet',
+    'Forest Slime',
     'Retro Coin',
     'Magic Wand'
   ];
@@ -110,12 +96,15 @@ export const InputSection: React.FC<InputSectionProps> = ({
             />
             <button
               type="submit"
-              disabled={!prompt.trim() || isLoading}
+              disabled={!prompt.trim() || !selectedModelId || isLoading}
+              title={!selectedModelId ? 'Consulte e selecione um modelo disponível primeiro' : undefined}
               className={`
                 flex items-center justify-center gap-2 px-6 py-3 rounded font-bold uppercase tracking-wider transition-all duration-200
-                ${!prompt.trim() || isLoading 
-                  ? 'bg-zinc-800 text-zinc-600 cursor-not-allowed' 
-                  : 'bg-cyan-500 text-white hover:bg-cyan-400 active:scale-95 shadow-lg shadow-cyan-500/20'}
+                ${
+                  !prompt.trim() || !selectedModelId || isLoading
+                    ? 'bg-zinc-800 text-zinc-600 cursor-not-allowed'
+                    : 'bg-cyan-500 text-white hover:bg-cyan-400 active:scale-95 shadow-lg shadow-cyan-500/20'
+                }
               `}
             >
               {isLoading ? (
@@ -131,7 +120,9 @@ export const InputSection: React.FC<InputSectionProps> = ({
               )}
             </button>
           </div>
-          <div className="flex items-center gap-4 px-4 py-2 border-t border-white/5 bg-zinc-950/50 flex-wrap">
+
+          <div className="flex items-center gap-3 px-4 py-2.5 border-t border-white/5 bg-zinc-950/50 flex-wrap">
+            {/* Resolution */}
             <div className="flex items-center gap-2">
               <Settings2 className="w-4 h-4 text-zinc-500" />
               <span className="text-xs text-zinc-500 font-bold uppercase tracking-wider">Resolution:</span>
@@ -141,8 +132,8 @@ export const InputSection: React.FC<InputSectionProps> = ({
                   type="button"
                   onClick={() => onResolutionChange(res)}
                   className={`px-2 py-1 text-xs rounded transition-all ${
-                    resolution === res 
-                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50' 
+                    resolution === res
+                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50'
                       : 'text-zinc-500 hover:text-zinc-300'
                   }`}
                 >
@@ -150,101 +141,117 @@ export const InputSection: React.FC<InputSectionProps> = ({
                 </button>
               ))}
             </div>
-            
+
             <div className="w-px h-4 bg-white/10 hidden sm:block"></div>
-            
+
+            {/* Source */}
             <div className="flex items-center gap-2">
               <span className="text-xs text-zinc-500 font-bold uppercase tracking-wider">Source:</span>
               <div className="flex bg-zinc-900 rounded p-0.5 border border-white/5">
                 <button
                   type="button"
-                  onClick={() => onModelSourceChange(ModelSource.GEMINI)}
-                  className={`flex items-center gap-1.5 px-2 py-1 rounded text-[10px] font-bold uppercase transition-all ${
-                    modelSource === ModelSource.GEMINI 
-                      ? 'bg-cyan-500 text-white' 
-                      : 'text-zinc-500 hover:text-zinc-300'
-                  }`}
-                >
-                  <Globe className="w-3 h-3" />
-                  Gemini
-                </button>
-                <button
-                  type="button"
                   onClick={() => onModelSourceChange(ModelSource.LOCAL)}
                   className={`flex items-center gap-1.5 px-2 py-1 rounded text-[10px] font-bold uppercase transition-all ${
-                    modelSource === ModelSource.LOCAL 
-                      ? 'bg-cyan-500 text-white' 
+                    modelSource === ModelSource.LOCAL
+                      ? 'bg-cyan-500 text-white'
                       : 'text-zinc-500 hover:text-zinc-300'
                   }`}
                 >
                   <Monitor className="w-3 h-3" />
                   Local
                 </button>
+                <button
+                  type="button"
+                  onClick={() => onModelSourceChange(ModelSource.BEAVERNET)}
+                  className={`flex items-center gap-1.5 px-2 py-1 rounded text-[10px] font-bold uppercase transition-all ${
+                    modelSource === ModelSource.BEAVERNET
+                      ? 'bg-emerald-500 text-white'
+                      : 'text-zinc-500 hover:text-zinc-300'
+                  }`}
+                >
+                  <Server className="w-3 h-3" />
+                  BeaverNet
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onModelSourceChange(ModelSource.GEMINI)}
+                  className={`flex items-center gap-1.5 px-2 py-1 rounded text-[10px] font-bold uppercase transition-all ${
+                    modelSource === ModelSource.GEMINI
+                      ? 'bg-blue-500 text-white'
+                      : 'text-zinc-500 hover:text-zinc-300'
+                  }`}
+                >
+                  <Globe className="w-3 h-3" />
+                  Gemini
+                </button>
               </div>
             </div>
 
             <div className="w-px h-4 bg-white/10 hidden sm:block"></div>
-            
-            <div className="flex items-center gap-2">
+
+            {/* Dynamic Model Dropdown (zero baked names) */}
+            <div className="flex items-center gap-2 flex-1 min-w-[200px]">
               <span className="text-xs text-zinc-500 font-bold uppercase tracking-wider">Model:</span>
-              {modelSource === ModelSource.GEMINI ? (
+              <div className="flex items-center gap-1.5 flex-1">
                 <select
-                  value={model}
-                  onChange={(e) => onModelChange(e.target.value as AIModel)}
-                  className="bg-zinc-900 border border-white/10 text-zinc-300 text-xs rounded px-2 py-1 outline-none focus:border-cyan-500/50 transition-all cursor-pointer"
+                  value={selectedModelId}
+                  onChange={(e) => onSelectedModelIdChange(e.target.value)}
+                  className="bg-zinc-900 border border-white/10 text-zinc-300 text-xs rounded px-2 py-1 outline-none focus:border-cyan-500/50 transition-all cursor-pointer flex-1 max-w-[240px]"
+                  disabled={availableModels.length === 0 || isFetchingModels}
                 >
-                  {Object.values(AIModel).map((m) => (
-                    <option key={m} value={m}>{MODEL_DISPLAY_NAMES[m]}</option>
-                  ))}
+                  {isFetchingModels ? (
+                    <option value="">Consultando modelos...</option>
+                  ) : availableModels.length === 0 ? (
+                    <option value="">Nenhum modelo carregado</option>
+                  ) : (
+                    availableModels.map((m) => (
+                      <option key={m.id} value={m.id}>
+                        {m.name}
+                      </option>
+                    ))
+                  )}
                 </select>
-              ) : (
-                <div className="flex items-center gap-2">
-                  <select
-                    value={selectedLocalModelId}
-                    onChange={(e) => onSelectedLocalModelIdChange(e.target.value)}
-                    className="bg-zinc-900 border border-white/10 text-zinc-300 text-xs rounded px-2 py-1 outline-none focus:border-cyan-500/50 transition-all cursor-pointer min-w-[120px]"
-                    disabled={localModels.length === 0}
-                  >
-                    {localModels.length === 0 ? (
-                      <option value="">No models fetched</option>
-                    ) : (
-                      localModels.map((m) => (
-                        <option key={m.id} value={m.id}>{m.name}</option>
-                      ))
-                    )}
-                  </select>
-                  <button
-                    type="button"
-                    onClick={handleFetchModels}
-                    disabled={isFetchingModels}
-                    className="p-1.5 bg-zinc-900 border border-white/10 rounded hover:bg-zinc-800 text-zinc-400 hover:text-cyan-400 transition-all"
-                    title="Fetch models from LM Studio"
-                  >
-                    <RefreshCw className={`w-3.5 h-3.5 ${isFetchingModels ? 'animate-spin' : ''}`} />
-                  </button>
-                </div>
-              )}
+                <button
+                  type="button"
+                  onClick={onRefreshModels}
+                  disabled={isFetchingModels}
+                  className="p-1.5 bg-zinc-900 border border-white/10 rounded hover:bg-zinc-800 text-zinc-400 hover:text-cyan-400 transition-all"
+                  title="Consultar modelos disponíveis no provedor"
+                >
+                  <RefreshCw className={`w-3.5 h-3.5 ${isFetchingModels ? 'animate-spin' : ''}`} />
+                </button>
+              </div>
             </div>
 
             {modelSource === ModelSource.LOCAL && (
-              <>
-                <div className="w-px h-4 bg-white/10 hidden sm:block"></div>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs text-zinc-500 font-bold uppercase tracking-wider">URL:</span>
-                  <input
-                    type="text"
-                    value={lmStudioUrl}
-                    onChange={(e) => onLmStudioUrlChange(e.target.value)}
-                    placeholder="http://localhost:1234"
-                    className="bg-zinc-900 border border-white/10 text-zinc-300 text-xs rounded px-2 py-1 outline-none focus:border-cyan-500/50 transition-all w-32"
-                  />
-                </div>
-              </>
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <span className="text-xs text-zinc-500 font-bold uppercase tracking-wider">URL:</span>
+                <input
+                  type="text"
+                  value={lmStudioUrl}
+                  onChange={(e) => onLmStudioUrlChange(e.target.value)}
+                  placeholder="http://127.0.0.1:1234"
+                  className="bg-zinc-900 border border-white/10 text-zinc-300 text-xs rounded px-2 py-1 outline-none focus:border-cyan-500/50 transition-all w-44"
+                />
+              </div>
             )}
           </div>
+
+          {modelsError && (
+            <div className="px-4 py-2 bg-amber-500/10 border-t border-amber-500/20 flex items-center justify-between gap-2 text-[11px] text-amber-300">
+              <span className="truncate">{modelsError}</span>
+              <button
+                type="button"
+                onClick={onOpenDocs}
+                className="underline font-bold text-cyan-400 hover:text-cyan-300 flex-shrink-0"
+              >
+                Configurar Chave
+              </button>
+            </div>
+          )}
         </div>
       </form>
-      
+
       {/* Quick suggestions */}
       <div className="mt-8 flex flex-wrap justify-center gap-2">
         {suggestions.map((suggestion) => (
